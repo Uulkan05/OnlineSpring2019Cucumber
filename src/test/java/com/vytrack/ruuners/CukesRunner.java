@@ -2,11 +2,11 @@ package com.vytrack.ruuners;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
-
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        tags ={"@storemanager and @negative"},
         features = {
-                "src/test/resources/features" //to specify where are the features
+                "src\\test\\resources\\features" //to specify where are the features
         },
         //feature contains scenarios
         //every scenario is like a test
@@ -14,7 +14,8 @@ import org.junit.runner.RunWith;
         glue = {"com/vytrack/step_definitions"},
         //dry tun - to generate step definitions automatically
         //you will see them in the console output
-        dryRun = true
+        dryRun = false
+//C:\Users//C:\Users\Uulkan\IdeaProjects\OnlineSpring2019Cucumber\src\test\resources\features
 
 )
 public class CukesRunner {

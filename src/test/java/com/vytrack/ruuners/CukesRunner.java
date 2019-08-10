@@ -4,7 +4,11 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        tags ={"@storemanager and @negative"},
+        plugin = {
+                "html:target/default-cucumber-reports"
+
+        },
+       tags ={"@navigation"},
         features = {
                 "src\\test\\resources\\features" //to specify where are the features
         },
@@ -14,7 +18,7 @@ import org.junit.runner.RunWith;
         glue = {"com/vytrack/step_definitions"},
         //dry tun - to generate step definitions automatically
         //you will see them in the console output
-        dryRun = false
+        dryRun = true
 //C:\Users//C:\Users\Uulkan\IdeaProjects\OnlineSpring2019Cucumber\src\test\resources\features
 
 )

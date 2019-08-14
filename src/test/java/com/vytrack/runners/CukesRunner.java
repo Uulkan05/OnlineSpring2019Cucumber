@@ -1,4 +1,4 @@
-package com.vytrack.ruuners;
+package com.vytrack.runners;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
                 "html:target/default-cucumber-reports"
 
         },
-       tags ={"@navigation"},
+       tags ={"@storemanager"},
         features = {
                 "src\\test\\resources\\features" //to specify where are the features
         },
@@ -18,7 +18,8 @@ import org.junit.runner.RunWith;
         glue = {"com/vytrack/step_definitions"},
         //dry tun - to generate step definitions automatically
         //you will see them in the console output
-        dryRun = true
+        dryRun = false
+
 //C:\Users//C:\Users\Uulkan\IdeaProjects\OnlineSpring2019Cucumber\src\test\resources\features
 
 )
